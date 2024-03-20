@@ -22,7 +22,7 @@ export default function Footer() {
           Условия сервиса
         </Link>
         <div className={styles.language}>
-          <img src="src/assets/Circle.svg" alt="Language" />
+          <img src="assets/Circle.svg" alt="Language" />
           <div className={styles.kaz}>Каз</div>
           <div className={styles.rus}>Рус</div>
           <div className={styles.eng}>Eng</div>
@@ -31,17 +31,17 @@ export default function Footer() {
       <div className={styles.socials}>
         <div className={styles.socialLink}>
           <a href="http://vk.com">
-            <img src="src/assets/VK.svg" alt="VK" />
+            <img src="assets/VK.svg" alt="VK" />
           </a>
         </div>
         <div className={styles.socialLink}>
           <a href="https://web.telegram.org/a/">
-            <img src="src/assets/Telegram.svg" alt="Telegram" />
+            <img src="assets/Telegram.svg" alt="Telegram" />
           </a>
         </div>
         <div className={styles.socialLink}>
           <a href="https://web.whatsapp.com/">
-            <img src="src/assets/Whatsapp.svg" alt="Whatsapp" />
+            <img src="assets/Whatsapp.svg" alt="Whatsapp" />
           </a>
         </div>
       </div>
