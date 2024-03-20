@@ -1,0 +1,14 @@
+@import "variables.scss";
+
+.cards {
+  display: flex;
+  gap: 3rem;
+}
+
+.sectionName {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24.38px;
+  color: $textColor4;
+}

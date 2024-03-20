@@ -164,11 +164,11 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("Montserrat-Medium.eot");
+  src: url("src/fonts/Montserrat-Medium.eot");
   src: local("Montserrat Medium"), local("Montserrat-Medium"),
-    url("Montserrat-Medium.eot?#iefix") format("embedded-opentype"),
-    url("Montserrat-Medium.woff") format("woff"),
-    url("Montserrat-Medium.ttf") format("truetype");
+    url("src/fonts/Montserrat-Medium.eot?#iefix") format("embedded-opentype"),
+    url("src/fonts/Montserrat-Medium.woff") format("woff"),
+    url("src/fonts/Montserrat-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }

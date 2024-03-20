@@ -24,6 +24,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .secondRow {
@@ -31,10 +32,14 @@
 }
 
 .cardImageWrapper {
-  height: 23.7rem;
+  height: 30rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .cardImage {
+  max-height: 24rem;
   max-width: 22rem;
 }
 
@@ -46,6 +51,20 @@
 }
 .cardPrice {
   color: $textColor3;
+}
+
+.cardPrice[data-oldprice] {
+  &::after {
+    content: attr(data-oldPrice) " ₽";
+    text-decoration: line-through;
+    position: absolute;
+    bottom: -1.6rem;
+    right: 0.7rem;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 15.85px;
+  }
 }
 
 .buyButton {

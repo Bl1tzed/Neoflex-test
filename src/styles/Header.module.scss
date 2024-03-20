@@ -18,3 +18,31 @@
   display: flex;
   gap: 2rem;
 }
+
+.cartBox,
+.favoriteBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.showNum {
+  display: none;
+}
+
+.showNum[data-num] {
+  display: block;
+  position: absolute;
+  top: -0.8rem;
+  right: -1rem;
+  background-color: $backgroundOrange;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  color: $textColor5;
+}
