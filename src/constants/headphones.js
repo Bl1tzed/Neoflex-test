@@ -1,7 +1,7 @@
 export const headphones = [
   {
     id: "01",
-    img: "src/assets/Item1.png",
+    img: "assets/Item1.png",
     title: "Apple BYZ S852I",
     price: 2927,
     rate: 4.7,
@@ -9,14 +9,14 @@ export const headphones = [
   },
   {
     id: "02",
-    img: "src/assets/Item2.png",
+    img: "assets/Item2.png",
     title: "Apple EarPods",
     price: 2327,
     rate: 4.5,
   },
   {
     id: "03",
-    img: "src/assets/Item3.png",
+    img: "assets/Item3.png",
     title: "Apple EarPods",
     price: 2327,
     rate: 4.5,

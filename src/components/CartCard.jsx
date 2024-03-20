@@ -38,7 +38,7 @@ export default function CartCard({ item }) {
   return (
     <div className={styles.card}>
       <button className={styles.cardDeleteButton} onClick={deleteHandler}>
-        <img src="src/assets/Delete.svg" alt="Delete item" />
+        <img src="assets/Delete.svg" alt="Delete item" />
       </button>
       <div className={styles.mainContent}>
         <div className={styles.cardImage}>
@@ -59,7 +59,7 @@ export default function CartCard({ item }) {
           >
             <img
               className={styles.plus}
-              src="src/assets/Plus.svg"
+              src="assets/Plus.svg"
               alt="Plus Quantity"
             />
           </button>
@@ -70,7 +70,7 @@ export default function CartCard({ item }) {
           >
             <img
               className={styles.minus}
-              src="src/assets/Minus.svg"
+              src="assets/Minus.svg"
               alt="Minus Quantity"
             />
           </button>

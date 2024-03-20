@@ -15,7 +15,7 @@ export default function Header() {
         <Link to="/favorite" className={styles.favoriteBox}>
           <img
             className={styles.favoriteImage}
-            src="src/assets/Like.svg"
+            src="assets/Like.svg"
             alt="Favorite"
           />
           <div className={styles.showNum}></div>
@@ -24,7 +24,7 @@ export default function Header() {
           <Link to="/cart">
             <img
               className={styles.cartImage}
-              src="src/assets/Cart.svg"
+              src="assets/Cart.svg"
               alt="Cart"
             />
             <div

@@ -43,7 +43,7 @@ export default function ProductCard({ item }) {
         </div>
         <div className={styles.secondRow}>
           <div className={styles.cardRate}>
-            <img src="src/assets/Star.svg" alt="Star" />
+            <img src="assets/Star.svg" alt="Star" />
             {item.rate}
           </div>
           <button onClick={() => buyHandler(item)} className={styles.buyButton}>
