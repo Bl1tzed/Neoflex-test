@@ -5,6 +5,7 @@
 .minusButton {
   background-color: transparent;
   border: 0;
+  cursor: pointer;
 }
 
 .card {
@@ -12,9 +13,12 @@
   flex-direction: column;
   background-color: $backgroundWhite;
   max-width: 63.3rem;
+  max-height: 21.8rem;
+  flex-basis: 63.3rem;
   position: relative;
   padding: 1.8rem;
   border-radius: 3rem;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 .cardDeleteButton {
@@ -39,11 +43,11 @@
 .quantityBlock {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .cardItemImage {
-  height: 15rem;
+  height: 13rem;
   max-width: 14rem;
 }
 
@@ -60,4 +64,17 @@
   font-weight: 600;
   line-height: 18.29px;
   color: $textColor6;
+}
+
+.quantity,
+.totalPrice {
+  font-family: Montserrat;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 20.72px;
+}
+
+.quantity {
+  width: 1.7rem;
+  text-align: center;
 }

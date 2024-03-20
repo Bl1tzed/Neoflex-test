@@ -34,9 +34,11 @@ export default function ProductCard({ item }) {
           <div className={styles.cardName}>{item.title}</div>
           <div
             className={styles.cardPrice}
-            data-oldprice={item.oldPrice ? item.oldPrice : null}
+            data-oldprice={
+              item.oldPrice ? item.oldPrice.toLocaleString() : null
+            }
           >
-            {item.price} ₽
+            {item.price.toLocaleString()} ₽
           </div>
         </div>
         <div className={styles.secondRow}>

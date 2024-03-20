@@ -1,16 +1,26 @@
 import styles from "@styles/Footer.module.scss";
-
+import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.logo}>QPICK</div>
+      <Link to="/" className={styles.logo}>
+        QPICK
+      </Link>
       <div className={styles.links}>
-        <div className={styles.link}>Избранное</div>
-        <div className={styles.link}>Корзина</div>
-        <div className={styles.link}>Контакты</div>
+        <Link to="/favorite" className={styles.link}>
+          Избранное
+        </Link>
+        <Link to="/cart" className={styles.link}>
+          Корзина
+        </Link>
+        <Link to="/contacts" className={styles.link}>
+          Контакты
+        </Link>
       </div>
       <div className={styles.secondary}>
-        <div className={styles.service}>Условия сервиса</div>
+        <Link to="/service" className={styles.service}>
+          Условия сервиса
+        </Link>
         <div className={styles.language}>
           <img src="src/assets/Circle.svg" alt="Language" />
           <div className={styles.kaz}>Каз</div>

@@ -21,4 +21,12 @@ body {
   color: $textColor1;
   display: flex;
   flex-direction: column;
+  font-family: Montserrat;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: $textColor1;
 }

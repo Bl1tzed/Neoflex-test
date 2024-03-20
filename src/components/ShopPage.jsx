@@ -1,5 +1,5 @@
-import { headphones } from "@utils/headphones";
-import { twsheadphones } from "@utils/twsheadphones";
+import { headphones } from "@constants/headphones";
+import { twsheadphones } from "@constants/twsheadphones";
 import ItemSection from "@components/ItemSection.jsx";
 
 export default function ShopPage() {

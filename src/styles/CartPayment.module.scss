@@ -1,0 +1,37 @@
+@import "variables.scss";
+
+.payment {
+  background-color: $backgroundWhite;
+  height: 12rem;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 3rem;
+  max-width: 35rem;
+  width: 100%;
+  padding: 2.1rem 2.1rem 0;
+}
+
+.paymentPriceBlock {
+  display: flex;
+  justify-content: space-between;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18.29px;
+}
+
+.paymentButton {
+  cursor: pointer;
+  background-color: $backgroundBlack;
+  color: $textColor5;
+  border-radius: 3rem;
+  width: calc(100% + 4.2rem);
+  margin: 1.5rem -2.1rem -2.1rem;
+  font-family: Montserrat;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 20.72px;
+  text-align: center;
+  padding: 2.2rem;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+  border: 0;
+}

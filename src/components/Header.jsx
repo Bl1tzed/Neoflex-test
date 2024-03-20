@@ -12,14 +12,14 @@ export default function Header() {
         <Link to="/">QPICK</Link>
       </div>
       <div className={styles.icons}>
-        <div className={styles.favoriteBox}>
+        <Link to="/favorite" className={styles.favoriteBox}>
           <img
             className={styles.favoriteImage}
             src="src/assets/Like.svg"
             alt="Favorite"
           />
           <div className={styles.showNum}></div>
-        </div>
+        </Link>
         <div className={styles.cartBox}>
           <Link to="/cart">
             <img

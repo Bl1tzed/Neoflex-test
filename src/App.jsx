@@ -7,24 +7,26 @@ import ShopPage from "@components/ShopPage";
 import CartPage from "@components/CartPage";
 
 import { useState, createContext } from "react";
+import NotFoundPage from "./components/NotFoundPage";
 
-export const ItemsContext = createContext();
+export const ItemsContext = createContext(null);
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
   console.log(cartItems);
   return (
     <ItemsContext.Provider value={[cartItems, setCartItems]}>
-      <div className={styles.contentWrapper}>
-        <Header cartItems={cartItems} />
-        <div className={styles.content}>
+      <main className={styles.contentWrapper}>
+        <Header />
+        <main className={styles.content}>
           <Routes>
             <Route path="/" element={<ShopPage />} />
             <Route path="/cart" element={<CartPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
-        </div>
+        </main>
         <Footer />
-      </div>
+      </main>
     </ItemsContext.Provider>
   );
 }

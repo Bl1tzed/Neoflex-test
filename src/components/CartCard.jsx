@@ -6,7 +6,7 @@ export default function CartCard({ item }) {
   const [cartItems, setCartItems] = useContext(ItemsContext);
   const itemIndex = cartItems.findIndex((value) => value.id === item.id);
 
-  function plusQuantityHandler() {
+  function increaseQuantityHandler() {
     const newItem = {
       ...cartItems[itemIndex],
       quantity: cartItems[itemIndex].quantity + 1,
@@ -16,16 +16,17 @@ export default function CartCard({ item }) {
     setCartItems(newCart);
   }
 
-  function minusQuantityHandler() {
+  function decreaseQuantityHandler() {
     const newItem = {
       ...cartItems[itemIndex],
       quantity: cartItems[itemIndex].quantity - 1,
     };
-    const newCart = cartItems.slice();
-    newItem.quantity < 1
-      ? newCart.splice(itemIndex, 1)
-      : newCart.splice(itemIndex, 1, newItem);
-    setCartItems(newCart);
+
+    if (newItem.quantity > 0) {
+      const newCart = cartItems.slice();
+      newCart.splice(itemIndex, 1, newItem);
+      setCartItems(newCart);
+    }
   }
 
   function deleteHandler() {
@@ -45,12 +46,17 @@ export default function CartCard({ item }) {
         </div>
         <div className={styles.info}>
           <div className={styles.title}>{item.title}</div>
-          <div className={styles.oneItemPrice}>{item.price} ₽</div>
+          <div className={styles.oneItemPrice}>
+            {item.price.toLocaleString()} ₽
+          </div>
         </div>
       </div>
       <div className={styles.bottomContent}>
         <div className={styles.quantityBlock}>
-          <button className={styles.plusButton} onClick={plusQuantityHandler}>
+          <button
+            className={styles.plusButton}
+            onClick={increaseQuantityHandler}
+          >
             <img
               className={styles.plus}
               src="src/assets/Plus.svg"
@@ -58,7 +64,10 @@ export default function CartCard({ item }) {
             />
           </button>
           <div className={styles.quantity}>{item.quantity}</div>
-          <button className={styles.minusButton} onClick={minusQuantityHandler}>
+          <button
+            className={styles.minusButton}
+            onClick={decreaseQuantityHandler}
+          >
             <img
               className={styles.minus}
               src="src/assets/Minus.svg"
@@ -67,7 +76,7 @@ export default function CartCard({ item }) {
           </button>
         </div>
         <div className={styles.totalPrice}>
-          {Number(item.quantity) * Number(item.price)} ₽
+          {(item.quantity * item.price).toLocaleString()} ₽
         </div>
       </div>
     </div>
