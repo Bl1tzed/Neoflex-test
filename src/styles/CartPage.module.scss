@@ -1,0 +1,26 @@
+@import "variables.scss";
+
+.cart {
+}
+
+.cartName {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24.38px;
+}
+
+.emptyCart {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: 2rem;
+}
+
+.cartCards {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

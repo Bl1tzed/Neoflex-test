@@ -1,0 +1,63 @@
+@import "variables.scss";
+
+.cardDeleteButton,
+.plusButton,
+.minusButton {
+  background-color: transparent;
+  border: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: $backgroundWhite;
+  max-width: 63.3rem;
+  position: relative;
+  padding: 1.8rem;
+  border-radius: 3rem;
+}
+
+.cardDeleteButton {
+  position: absolute;
+  top: 1.8rem;
+  right: 1.8rem;
+}
+
+.mainContent {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.bottomContent {
+  margin-top: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quantityBlock {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.cardItemImage {
+  height: 15rem;
+  max-width: 14rem;
+}
+
+.title {
+  font-family: Montserrat;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 20.72px;
+}
+
+.oneItemPrice {
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18.29px;
+  color: $textColor6;
+}

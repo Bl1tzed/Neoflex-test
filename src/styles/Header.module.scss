@@ -14,6 +14,11 @@
   line-height: 30.48px;
 }
 
+.logo a {
+  text-decoration: none;
+  color: $textColor1;
+}
+
 .icons {
   display: flex;
   gap: 2rem;
@@ -26,6 +31,10 @@
   align-items: center;
 }
 
+.cartImage {
+  margin-top: 3px;
+}
+
 .showNum {
   display: none;
 }
@@ -33,7 +42,7 @@
 .showNum[data-num] {
   display: block;
   position: absolute;
-  top: -0.8rem;
+  top: -0.5rem;
   right: -1rem;
   background-color: $backgroundOrange;
   width: 2rem;

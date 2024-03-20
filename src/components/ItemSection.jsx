@@ -1,7 +1,7 @@
 import styles from "@styles/ItemSection.module.scss";
 import ProductCard from "@components/ProductCard";
 
-export default function ItemSection({ setNum, sectionName, items }) {
+export default function ItemSection({ sectionName, items }) {
   return (
     <section>
       <h3 className={styles.sectionName}>{sectionName}</h3>
@@ -10,12 +10,8 @@ export default function ItemSection({ setNum, sectionName, items }) {
           return (
             <ProductCard
               key={item.title + index}
-              productImageLink={item.img}
-              productName={item.title}
-              productPrice={item.price}
-              productRate={item.rate}
-              setNum={setNum}
-              oldProductPrice={item.oldPrice ? item.oldPrice : null}
+              id={(item.title + index).replace(/\s+/g, "")}
+              item={item}
             />
           );
         })}

@@ -1,28 +1,31 @@
+import { Routes, Route } from "react-router-dom";
+
 import styles from "@styles/App.module.scss";
-import Header from "@components/Header.jsx";
-import ItemSection from "@components/ItemSection.jsx";
-import { useState } from "react";
-import { headphones } from "@utils/headphones";
-import { twsheadphones } from "@utils/twsheadphones";
-import Footer from "./components/Footer";
+import Header from "@components/Header";
+import Footer from "@components/Footer";
+import ShopPage from "@components/ShopPage";
+import CartPage from "@components/CartPage";
+
+import { useState, createContext } from "react";
+
+export const ItemsContext = createContext();
 
 function App() {
-  const [num, setNum] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
+  console.log(cartItems);
   return (
-    <div className={styles.contentWrapper}>
-      <Header num={num} />
-      <ItemSection
-        setNum={setNum}
-        sectionName={"Наушники"}
-        items={headphones}
-      />
-      <ItemSection
-        setNum={setNum}
-        sectionName={"Беспроводные наушники"}
-        items={twsheadphones}
-      />
-      <Footer />
-    </div>
+    <ItemsContext.Provider value={[cartItems, setCartItems]}>
+      <div className={styles.contentWrapper}>
+        <Header cartItems={cartItems} />
+        <div className={styles.content}>
+          <Routes>
+            <Route path="/" element={<ShopPage />} />
+            <Route path="/cart" element={<CartPage />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+    </ItemsContext.Provider>
   );
 }
 

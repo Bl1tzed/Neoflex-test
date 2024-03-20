@@ -4,3 +4,7 @@
   margin: 0 auto;
   max-width: 111rem;
 }
+
+.content {
+  min-height: calc(100svh - 23rem);
+}
