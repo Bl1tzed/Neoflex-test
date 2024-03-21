@@ -1,15 +1,18 @@
-import { headphones } from "@constants/headphones";
-import { twsheadphones } from "@constants/twsheadphones";
 import ItemSection from "@components/ItemSection.jsx";
+import { products } from "@constants/products";
 
 export default function ShopPage() {
   return (
     <>
-      <ItemSection sectionName={"Наушники"} items={headphones} />
-      <ItemSection
-        sectionName={"Беспроводные наушники"}
-        items={twsheadphones}
-      />
+      {products.map((section) => {
+        return (
+          <ItemSection
+            key={section.name}
+            sectionName={section.name}
+            items={section.items}
+          />
+        );
+      })}
     </>
   );
 }

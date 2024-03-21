@@ -3,6 +3,7 @@
 .cards {
   display: flex;
   gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .sectionName {
