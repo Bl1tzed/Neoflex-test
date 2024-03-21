@@ -2,7 +2,6 @@ import { ItemsContext } from "@/App";
 import styles from "@styles/Header.module.scss";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-
 export default function Header() {
   const [cartItems] = useContext(ItemsContext);
 
@@ -12,14 +11,16 @@ export default function Header() {
         <Link to="/">QPICK</Link>
       </div>
       <div className={styles.icons}>
-        <Link to="/favorite" className={styles.favoriteBox}>
-          <img
-            className={styles.favoriteImage}
-            src="assets/Like.svg"
-            alt="Favorite"
-          />
-          <div className={styles.showNum}></div>
-        </Link>
+        <div className={styles.favoriteBox}>
+          <Link to="/favorite">
+            <img
+              className={styles.favoriteImage}
+              src="assets/Like.svg"
+              alt="Favorite"
+            />
+            <div className={styles.showNum}></div>
+          </Link>
+        </div>
         <div className={styles.cartBox}>
           <Link to="/cart">
             <img

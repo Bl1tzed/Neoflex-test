@@ -41,7 +41,8 @@
 .socialLink {
   display: flex;
   align-items: center;
-  height: 2.6rem;
+  justify-content: center;
+  height: 3.7rem;
 }
 
 .service {
@@ -63,4 +64,17 @@
 
 .rus {
   color: $textColor3;
+}
+
+.service,
+.link {
+  transition: outline 0.3s;
+  outline: 1px solid transparent;
+  border-radius: 0.5rem;
+  padding: 2px;
+}
+
+.service:hover,
+.link:hover {
+  outline: 1px solid $outlineHover;
 }

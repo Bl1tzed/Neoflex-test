@@ -29,10 +29,20 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 3rem;
+  transition: outline 0.3s;
+  outline: 2px solid transparent;
+  border-radius: 0.5rem;
+}
+
+.cartBox:hover,
+.favoriteBox:hover {
+  outline: 2px solid $outlineHover;
 }
 
 .cartImage {
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 .showNum {

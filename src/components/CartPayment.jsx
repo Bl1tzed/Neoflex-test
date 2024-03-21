@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { ItemsContext } from "@/App";
 import styles from "@styles/CartPayment.module.scss";
+
 export default function CartPayment() {
   const [cartItems] = useContext(ItemsContext);
   return (

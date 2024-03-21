@@ -25,6 +25,14 @@
   position: absolute;
   top: 1.8rem;
   right: 1.8rem;
+  padding: 4px 2px 0;
+  transition: outline 0.3s;
+  outline: 2px solid transparent;
+  border-radius: 0.5rem;
+}
+
+.cardDeleteButton:hover {
+  outline: 2px solid $outlineHover;
 }
 
 .mainContent {
@@ -46,9 +54,15 @@
   gap: 2rem;
 }
 
+.cardImage {
+  width: 14.3rem;
+  display: flex;
+  justify-content: center;
+}
+
 .cardItemImage {
   height: 13rem;
-  max-width: 14rem;
+  max-width: 14.3rem;
 }
 
 .title {

@@ -8,12 +8,10 @@ import CartPage from "@components/CartPage";
 
 import { useState, createContext } from "react";
 import NotFoundPage from "./components/NotFoundPage";
-
 export const ItemsContext = createContext(null);
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
-  console.log(cartItems);
   return (
     <ItemsContext.Provider value={[cartItems, setCartItems]}>
       <main className={styles.contentWrapper}>

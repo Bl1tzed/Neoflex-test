@@ -1,12 +1,13 @@
 import styles from "@styles/ProductCard.module.scss";
 import { useContext } from "react";
 import { ItemsContext } from "@/App";
+import { motion } from "framer-motion";
 
-export default function ProductCard({ item }) {
+export default function ProductCard({ item, index }) {
   const [cartItems, setCartItems] = useContext(ItemsContext);
+  const itemIndex = cartItems.findIndex((value) => value.id === item.id);
 
-  function buyHandler(item) {
-    const itemIndex = cartItems.findIndex((value) => value.id === item.id);
+  function buyHandler() {
     if (itemIndex < 0) {
       const newItem = {
         ...item,
@@ -25,7 +26,15 @@ export default function ProductCard({ item }) {
   }
 
   return (
-    <div className={styles.card}>
+    <motion.div
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{
+        delay: 0.3 + 0.3 * Math.floor(index / 3),
+        duration: 0.3,
+      }}
+      className={styles.card}
+    >
       <div className={styles.cardImageWrapper}>
         <img src={item.img} alt="Product Image" className={styles.cardImage} />
       </div>
@@ -46,11 +55,11 @@ export default function ProductCard({ item }) {
             <img src="assets/Star.svg" alt="Star" />
             {item.rate}
           </div>
-          <button onClick={() => buyHandler(item)} className={styles.buyButton}>
+          <button onClick={buyHandler} className={styles.buyButton}>
             Купить
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
