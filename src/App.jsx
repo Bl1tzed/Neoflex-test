@@ -8,7 +8,7 @@ import CartPage from "@components/CartPage";
 
 import { useState, createContext } from "react";
 import NotFoundPage from "./components/NotFoundPage";
-export const ItemsContext = createContext(null);
+export const ItemsContext = createContext([]);
 
 function App() {
   const [cartItems, setCartItems] = useState([]);

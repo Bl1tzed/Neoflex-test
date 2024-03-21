@@ -78,8 +78,7 @@
   transition: outline 0.3s;
   outline: 1px solid transparent;
   border-radius: 0.5rem;
-}
-
-.buyButton:hover {
-  outline: 1px solid $outlineHover;
+  &:hover {
+    outline: 1px solid $outlineHover;
+  }
 }

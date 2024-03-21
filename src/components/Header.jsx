@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 export default function Header() {
   const [cartItems] = useContext(ItemsContext);
-
+  const productsQuant = cartItems.reduce((acc, item) => acc + item.quantity, 0);
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -32,8 +32,7 @@ export default function Header() {
               className={styles.showNum}
               data-num={cartItems.length ? cartItems.length : null}
             >
-              {!!cartItems.length &&
-                cartItems.reduce((acc, item) => acc + item.quantity, 0)}
+              {productsQuant < 100 ? productsQuant : ":D"}
             </div>
           </Link>
         </div>

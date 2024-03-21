@@ -18,6 +18,10 @@
   font-size: 25px;
   font-weight: 700;
   line-height: 30.48px;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .links {
@@ -30,12 +34,10 @@
   line-height: 20.72px;
 }
 
-.secondary {
-}
-
 .socials {
   display: flex;
   gap: 1.8rem;
+  height: 3.5rem;
 }
 
 .socialLink {
@@ -43,6 +45,10 @@
   align-items: center;
   justify-content: center;
   height: 3.7rem;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .service {
@@ -52,10 +58,10 @@
   line-height: 20.72px;
 }
 
-.language {
+.languages {
   display: flex;
-  gap: 1.7rem;
-  margin-top: 3.5rem;
+  gap: 1.5rem;
+  margin-top: 3.3rem;
   font-family: Montserrat;
   font-size: 15px;
   font-weight: 500;
@@ -72,9 +78,18 @@
   outline: 1px solid transparent;
   border-radius: 0.5rem;
   padding: 2px;
+  &:hover {
+    outline: 1px solid $outlineHover;
+  }
 }
 
-.service:hover,
-.link:hover {
-  outline: 1px solid $outlineHover;
+.language {
+  cursor: pointer;
+  padding: 2px;
+  transition: outline 0.3s;
+  outline: 1px solid transparent;
+  border-radius: 0.5rem;
+  &:hover {
+    outline: 1px solid $outlineHover;
+  }
 }

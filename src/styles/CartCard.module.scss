@@ -29,10 +29,9 @@
   transition: outline 0.3s;
   outline: 2px solid transparent;
   border-radius: 0.5rem;
-}
-
-.cardDeleteButton:hover {
-  outline: 2px solid $outlineHover;
+  &:hover {
+    outline: 2px solid $outlineHover;
+  }
 }
 
 .mainContent {

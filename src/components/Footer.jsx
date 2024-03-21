@@ -1,4 +1,5 @@
 import styles from "@styles/Footer.module.scss";
+import { clsx } from "clsx";
 import { Link } from "react-router-dom";
 export default function Footer() {
   return (
@@ -21,11 +22,11 @@ export default function Footer() {
         <Link to="/service" className={styles.service}>
           Условия сервиса
         </Link>
-        <div className={styles.language}>
+        <div className={styles.languages}>
           <img src="assets/Circle.svg" alt="Language" />
-          <div className={styles.kaz}>Каз</div>
-          <div className={styles.rus}>Рус</div>
-          <div className={styles.eng}>Eng</div>
+          <div className={clsx(styles.language, styles.kaz)}>Каз</div>
+          <div className={clsx(styles.language, styles.rus)}>Рус</div>
+          <div className={clsx(styles.language, styles.eng)}>Eng</div>
         </div>
       </div>
       <div className={styles.socials}>
