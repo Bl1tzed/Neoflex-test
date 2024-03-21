@@ -32,7 +32,8 @@ export default function Header() {
               className={styles.showNum}
               data-num={cartItems.length ? cartItems.length : null}
             >
-              {cartItems.length}
+              {!!cartItems.length &&
+                cartItems.reduce((acc, item) => acc + item.quantity, 0)}
             </div>
           </Link>
         </div>
