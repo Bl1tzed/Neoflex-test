@@ -14,7 +14,7 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
   return (
     <ItemsContext.Provider value={[cartItems, setCartItems]}>
-      <main className={styles.contentWrapper}>
+      <div className={styles.contentWrapper}>
         <Header />
         <main className={styles.content}>
           <Routes>
@@ -24,7 +24,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
-      </main>
+      </div>
     </ItemsContext.Provider>
   );
 }
